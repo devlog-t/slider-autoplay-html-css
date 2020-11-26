@@ -1,0 +1,41 @@
+/* https://www.youtube.com/watch?v=ZsuTciVL8PU */
+
+.slider{
+  width: 500px; /* largeur partie visible */
+  height: 300px; /* hauteur plus petit img, excédent img cacher par overflow */
+  overflow: hidden; /* cache les images hors champs*/
+  margin: 150px auto; /* esthétique */
+}
+
+.slides{
+  width: 300%; /* largeur total multiple selon nb images*/
+  animation: glisse 15s infinite; /* nom animation, durée (sera divisé par les % */
+}
+
+.slide{
+  float: left; /* les images sont en ligne, display flex ? */
+}
+
+@keyframes glisse { /* new aniamtion */
+  0% { /* 0 -> 100% = durée de l'animation */
+    transform: translateX(0); /* action */
+  }
+  10% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-500px);
+  }
+  43% {
+    transform: translateX(-500px);
+  }
+  66% {
+    transform: translateX(-1000px);
+  }
+  76% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
